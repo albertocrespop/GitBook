@@ -1,20 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # 👽 $ whoami
 
 Mi nombre es **Alberto Crespo Palma**, un estudiante de 4º de Ingeniería Informática en la Universidad de Murcia (UMU), en la mención de Tecnologías de la Información (comúnmente conocida como "redes"). Desde pequeño, he estado conectado con el mundo de la informática y la ciberseguridad, pero no fue hasta que entré a la universidad que pude complementar los conocimientos que iba adquiriendo con la rama que a mí me gustaba de verdad.
