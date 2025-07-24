@@ -11,4 +11,4 @@ hydra -L /usr/share/wordlists/SecLists-2025.2/Usernames/top-usernames-shortlist.
 [22][ssh] host: 172.17.0.2   login: root   password: estrella
 ```
 
-![[Pasted image 20250724032351.png]]
+![[/assets/Pasted image 20250724032351.png]]
