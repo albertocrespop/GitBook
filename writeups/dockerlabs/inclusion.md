@@ -1,18 +1,5 @@
 ---
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
+description: '🧠Dificultad: Medio | 🔓14/07/2025'
 ---
 
 # Inclusion

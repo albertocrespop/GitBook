@@ -1,3 +1,7 @@
+---
+description: '🧠 Dificultad: Muy fácil | 🔓22/07/2025'
+---
+
 # BreakMySSH
 
 Con un `nmap` vemos que solo está abierto el puerto de SSH. Por el nombre de la máquina me puedo imaginar que hay que hacerle fuerza bruta.
