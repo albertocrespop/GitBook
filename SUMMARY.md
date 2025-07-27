@@ -5,6 +5,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [Hedgehog](writeups/dockerlabs/hedgehog.md)
   * [Tproot](writeups/dockerlabs/tproot.md)
   * [Vacaciones](writeups/dockerlabs/vacaciones.md)
   * [BorazuwarahCTF](writeups/dockerlabs/borazuwarahctf.md)

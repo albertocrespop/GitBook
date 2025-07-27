@@ -4,7 +4,7 @@ description: '🧠Dificultad: Muy fácil | 🔓25/07/2025'
 
 # Tproot
 
-## Reconocimiento
+## 🕵️ Reconocimiento
 
 Comenzamos con un escaneo de puertos con `nmap` :
 
@@ -24,7 +24,7 @@ Si buscamos algún exploit para los puertos encontrados, vemos que existe uno pa
 
 Esta versión de `FTP` presenta una vulnerabilidad de manera que si introducimos un nombre de usuario en el login del `FTP`  terminado en `:)` , se abre una backdoor en el puerto 6200 (más [info](https://www.broadcom.com/support/security-center/attacksignatures/detail?asid=33416)).
 
-## Ganando acceso
+## 🚪 Ganando acceso
 
 Utilicé un exploit hecho en `python`  con la librería `socket` :
 
