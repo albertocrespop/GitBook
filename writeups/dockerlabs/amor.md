@@ -16,7 +16,7 @@ La máquina solo cuenta con dos servicios: SSH y HTTP.  Si revisamos la página 
 
 ## 🚪 Ganando acceso
 
-Probando fuerza bruta en el SSH con el usuario juan no obtuve nada, pero sí para el usuario carlota:
+Probando fuerza bruta en el SSH con el usuario `juan` no obtuve nada, pero sí para el usuario `carlota`:
 
 <figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 

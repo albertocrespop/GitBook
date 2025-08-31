@@ -5,6 +5,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [AnonymousPingu](writeups/dockerlabs/anonymouspingu.md)
   * [Amor](writeups/dockerlabs/amor.md)
   * [AguaDeMayo](writeups/dockerlabs/aguademayo.md)
   * [Hedgehog](writeups/dockerlabs/hedgehog.md)
