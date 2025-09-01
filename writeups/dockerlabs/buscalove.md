@@ -20,7 +20,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 
 Vemos que existe un directorio llamado `/wordpress` con el siguiente contenido:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure></div>
 
 Es una página sencilla sin CSS ni ningún enlace externo. El código fuente de la página tampoco nos dice nada. Si realizamos otro fuzzing sobre el directorio wordpress:
 

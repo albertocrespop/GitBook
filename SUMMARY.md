@@ -5,6 +5,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [ChocolateLovers](writeups/dockerlabs/chocolatelovers.md)
   * [BuscaLove](writeups/dockerlabs/buscalove.md)
   * [AnonymousPingu](writeups/dockerlabs/anonymouspingu.md)
   * [Amor](writeups/dockerlabs/amor.md)
