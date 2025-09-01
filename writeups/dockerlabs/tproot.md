@@ -88,4 +88,4 @@ except Exception as e:
 
 Al ejecutar el exploit, ganamos acceso con una shell como `root` :
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

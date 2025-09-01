@@ -34,7 +34,7 @@ Pasamos la imagen a nuestra máquina con un servidor de `python`, y ejecutamos `
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure></div>
 
-Esto pueden ser las credenciales de algún usuario. Si vemos el `/etc/passwd` , hay un usuario `oscar` que tiene un shell de inicio de sesión asignado, por lo que podemos probar con este usuario.
+Esto pueden ser las credenciales de algún usuario. Si vemos el `/etc/passwd`, hay un usuario `oscar` que tiene un shell de inicio de sesión asignado, por lo que podemos probar con este usuario.
 
 <figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 

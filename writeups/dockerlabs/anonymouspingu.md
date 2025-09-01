@@ -10,7 +10,7 @@ El escaneo de puertos nos dice que hay un servicio FTP con login anónimo, y un 
 
 <figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
-En el servicio FTP se encuentran los archivos utilizados para el servicio web. La carpeta `upload` está habilitada para subir contenido. Además, si accedemos a este directorio desde el servicio web, nos encontramos con un `directory listing` .
+En el servicio FTP se encuentran los archivos utilizados para el servicio web. La carpeta `upload` está habilitada para subir contenido. Además, si accedemos a este directorio desde el servicio web, nos encontramos con un `directory listing`.
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure></div>
 

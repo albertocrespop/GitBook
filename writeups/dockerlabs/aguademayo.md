@@ -46,3 +46,10 @@ Al ejecutar `bettercap`, vemos con el comando `help` que podemos ejecutar comand
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
+Adicionalmente, si ejecutamos el siguiente comando como `root`
+
+```bash
+chmod +s /bin/bash
+```
+
+podemos abrir una terminal como `root` con `/bin/bash -p`.
