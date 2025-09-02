@@ -8,13 +8,13 @@ description: '🧠Dificultad: Fácil | 🔓28/08/2025'
 
 Comenzamos haciendo un escaneo de puertos con `nmap` :
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tenemos un servicio web corriendo en la máquina, además del SSH. Enumerando nos encontramos con un directorio llamado `images` donde hay habilitado un directory listing. Observamos una imagen, `agua_ssh.jpg`.
 
-<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ## 🚪 Ganando acceso
 
