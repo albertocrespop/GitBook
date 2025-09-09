@@ -90,13 +90,13 @@ Finished
 ===============================================================
 ```
 
-En `/backup` tenemos un directory listing que nos muestra un fichero, `backup.txt`:
+En `/backup` tenemos un directory indexing que nos muestra un fichero, `backup.txt`:
 
 ```
 Usuario para todos mis servicios: russoski (cambiar pronto!)
 ```
 
-En `/important` hay otro directory listing, con el fichero `important.md`:
+En `/important` hay otro directory indexing, con el fichero `important.md`:
 
 ```markdown
 -------------------------------------------------------
