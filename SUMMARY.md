@@ -5,6 +5,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [Grooti](writeups/dockerlabs/grooti.md)
   * [Escolares](writeups/dockerlabs/escolares.md)
   * [DockerLabs](writeups/dockerlabs/dockerlabs.md)
   * [ConsoleLog](writeups/dockerlabs/consolelog.md)

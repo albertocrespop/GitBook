@@ -8,7 +8,7 @@ description: '🧠Dificultad: Muy fácil | 🔓25/07/2025'
 
 Comenzamos con un escaneo de puertos con `nmap` :
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 Vemos que el login anónimo en el servidor FTP da fallo. El puerto 80 aloja un servidor web con la página por defecto de apache en el directorio raíz. Si le hacemos un listado de directorios, no encontramos nada relevante.
 
@@ -16,11 +16,11 @@ Vemos que el login anónimo en el servidor FTP da fallo. El puerto 80 aloja un s
 ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt:FUZZ -u http://$IPTARGET/FUZZ
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si buscamos algún exploit para los puertos encontrados, vemos que existe uno para el puerto `ftp` :
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 Esta versión de `FTP` presenta una vulnerabilidad de manera que si introducimos un nombre de usuario en el login del `FTP`  terminado en `:)` , se abre una backdoor en el puerto 6200 (más [info](https://www.broadcom.com/support/security-center/attacksignatures/detail?asid=33416)).
 
@@ -88,4 +88,4 @@ except Exception as e:
 
 Al ejecutar el exploit, ganamos acceso con una shell como `root` :
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
