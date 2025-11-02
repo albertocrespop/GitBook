@@ -8,7 +8,7 @@ description: '🧠Dificultad: Fácil | 🔓25/09/2025'
 
 Escaneamos los puertos de la máquina con nmap:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Tenemos una base de datos `mysql`, un servicio `http` y un `ssh`.
 
@@ -45,7 +45,7 @@ En las instrucciones que nos descargamos, vemos un comando escrito al final que 
 
 Probamos con la contraseña encontrada anteriormente (`password1`):
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Listando el contenido de la base de datos, encontramos una ruta que no conocíamos: `/unprivate/secret`.
 

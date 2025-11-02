@@ -22,7 +22,7 @@ Realizamos un escaneo de directorios sobre este servicio:
 ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt:FUZZ -u http://$IPTARGET/FUZZ -e .html,.php,.txt,.xml,.js
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el directorio `/backend` se encuentran algunos ficheros utilizados para el backend del servicio web. Entre ellos, nos fijamos en el fichero llamado `server.js`:
 

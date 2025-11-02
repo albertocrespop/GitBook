@@ -1,6 +1,7 @@
 # Table of contents
 
 * [👽 $ whoami](README.md)
+* [🏆 CTF Achievements](ctf-achievements.md)
 
 ## Writeups
 

@@ -10,7 +10,7 @@ description: '🧠Dificultad: Fácil | 🔓02/09/2025'
 
 La máquina solo tiene el puerto 80 abierto con un servicio web. Si accedemos a él a través de un navegador, vemos la página por defecto de Apache. En los comentarios de la página se hace referencia a `nibbleblog`. Si accedemos al directorio `/nibbleblog`, vemos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Estamos en la página principal de Nibbleblog, una aplicación que permite crear y administrar blogs. En el post inicial nos dan un enlace a `/nibbleblog/admin.php`. Si accedemos a este sitio encontraremos un inicio de sesión al panel de administrador. Probando con las credenciales `admin:admin`, ganamos acceso al panel:
 
