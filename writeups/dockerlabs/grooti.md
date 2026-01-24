@@ -8,7 +8,7 @@ description: '🧠Dificultad: Fácil | 🔓25/09/2025'
 
 Escaneamos los puertos de la máquina con nmap:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tenemos una base de datos `mysql`, un servicio `http` y un `ssh`.
 
@@ -37,19 +37,19 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 
 Si accedemos al directorio `/secret` nos encontramos con esta página:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 En las instrucciones que nos descargamos, vemos un comando escrito al final que nos sirve para entrar a la base de datos mysql:
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Probamos con la contraseña encontrada anteriormente (`password1`):
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Listando el contenido de la base de datos, encontramos una ruta que no conocíamos: `/unprivate/secret`.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si accedemos a dicha ruta, vemos esta página:
 

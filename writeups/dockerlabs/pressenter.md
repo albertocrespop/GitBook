@@ -1,5 +1,5 @@
 ---
-description: '🧠Dificultad: Fácil | 🔓16/10/1015'
+description: '🧠Dificultad: Fácil | 🔓16/10/2025'
 ---
 
 # Pressenter

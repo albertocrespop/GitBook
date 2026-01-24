@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [Los 40 Ladrones](writeups/dockerlabs/los-40-ladrones.md)
   * [Pressenter](writeups/dockerlabs/pressenter.md)
   * [Vulnvault](writeups/dockerlabs/vulnvault.md)
   * [Pntopntobarra](writeups/dockerlabs/pntopntobarra.md)
