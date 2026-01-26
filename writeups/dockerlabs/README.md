@@ -4,7 +4,7 @@ icon: message-pen
 
 # DockerLabs
 
-<div align="left" data-full-width="false"><figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
+<div align="left" data-full-width="false"><figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
 
 DockerLabs es una plataforma creada por **El Pingüino de Mario** donde puedes descargar cientos de máquinas para poner en práctica diversas técnicas de pentesting.
 
