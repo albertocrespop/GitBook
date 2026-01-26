@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [NodeClimb](writeups/dockerlabs/nodeclimb.md)
   * [Move](writeups/dockerlabs/move.md)
   * [Los 40 Ladrones](writeups/dockerlabs/los-40-ladrones.md)
   * [Pressenter](writeups/dockerlabs/pressenter.md)
