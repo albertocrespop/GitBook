@@ -14,7 +14,7 @@ nmap -sC -sV -Pn $IPTARGET
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Vemos puertos web abiertos (HTTP y HTTPS). Vamos a ver qué directorios encontramos en estos servicios:
 
@@ -24,7 +24,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para la página que usa SSL/TLS, vamos a utilizar el parámetro -k para ignorar los errores de los certificados.
 
@@ -42,15 +42,15 @@ La página web que no está securizada contiene un directory listing. En este se
 
 Si probamos a poner esta palabra en la herramienta Cyberchef y utilizamos el cifrado césar, encontramos que si desplazamos 3 veces hacia atrás las letras, vemos una posible contraseña coherente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veamos qué hay en el servicio HTTPS. Hallamos una sección donde podemos subir archivos a la web.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Probamos a subir un archivo llamado `prueba`, pero este no se muestra en la página. Si cambiamos la extensión desde burpsuite a `.txt`, entonces si podemos visualizarlo.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Directamente podemos probar si podemos subir un archivo `.php`:
 

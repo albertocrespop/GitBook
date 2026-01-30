@@ -22,11 +22,11 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 La única página que nos interesa es `maintenance.html`, ya que en `index.html` se encuentra la página default de Apache.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 De momento esta información no nos resulta relevante ya que no tenemos acceso a la máquina.
 
@@ -40,7 +40,7 @@ curl --path-as-is http://172.17.0.2:3000/public/plugins/alertlist/../../../../..
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con la opción `--path-as-is` hacemos que curl no corrija los `../` de la URL, ya que precisamente queremos utilizarlos para realizar un path traversal.
 
@@ -54,7 +54,7 @@ curl --path-as-is http://172.17.0.2:3000/public/plugins/alertlist/../../../../..
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si probamos a entrar por SSH con el usuario sacado del fichero `/etc/passwd` (el único que posee una shell interactiva) y esta contraseña, obtenemos acceso a la máquina.
 

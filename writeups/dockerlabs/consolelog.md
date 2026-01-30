@@ -14,7 +14,7 @@ Vemos que hay dos servicios HTTP abiertos: uno en el puerto 80 y otro en el 3000
 
 Si nos vamos al navegador, nos encontramos con una página con un botón. Cada vez que le damos al botón, se llama a la función `console.log` que imprime lo siguiente en la consola:
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Realizamos un escaneo de directorios sobre este servicio:
 
@@ -22,13 +22,13 @@ Realizamos un escaneo de directorios sobre este servicio:
 ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt:FUZZ -u http://$IPTARGET/FUZZ -e .html,.php,.txt,.xml,.js
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el directorio `/backend` se encuentran algunos ficheros utilizados para el backend del servicio web. Entre ellos, nos fijamos en el fichero llamado `server.js`:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Este script en `js` gestiona peticiones POST de un servicio alojado en el puerto 3000 (visto previamente). Por cada petición POST que se hace al directorio `/recurso/` de dicho servidor, se comprueba si la petición incluye el token `tokentraviesito`. En dicho caso, se devuelve la cadena `lapassworddebackupmaschingonadetodas`. De lo contrario, se devuelve un 401.
 
