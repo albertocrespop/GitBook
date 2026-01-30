@@ -12,7 +12,7 @@ Realizamos un escaneo de puertos con nmap:
 nmap -sC -sV -Pn $IPTARGET
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que la máquina está corriendo un servicio web con Apache, SSH y Grafana. Con un escaneo de directorios encontramos lo siguiente:
 
@@ -22,11 +22,11 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 La única página que nos interesa es `maintenance.html`, ya que en `index.html` se encuentra la página default de Apache.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 De momento esta información no nos resulta relevante ya que no tenemos acceso a la máquina.
 
@@ -40,7 +40,7 @@ curl --path-as-is http://172.17.0.2:3000/public/plugins/alertlist/../../../../..
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con la opción `--path-as-is` hacemos que curl no corrija los `../` de la URL, ya que precisamente queremos utilizarlos para realizar un path traversal.
 
@@ -54,26 +54,26 @@ curl --path-as-is http://172.17.0.2:3000/public/plugins/alertlist/../../../../..
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si probamos a entrar por SSH con el usuario sacado del fichero `/etc/passwd` (el único que posee una shell interactiva) y esta contraseña, obtenemos acceso a la máquina.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalada de privilegios
 
 Verificamos los permisos que tenemos como `sudo` :
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Podemos correr como root el fichero `maintenance.py` usando `python3`. Veamos qué código tiene el fichero:
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 Como tenemos permisos de escritura sobre este fichero, podemos modificarlo.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con este código conseguiremos una shell como root si lo ejecutamos con sudo.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
