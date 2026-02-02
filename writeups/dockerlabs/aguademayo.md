@@ -8,13 +8,13 @@ description: '🧠Dificultad: Fácil | 🔓28/08/2025'
 
 Comenzamos haciendo un escaneo de puertos con `nmap` :
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tenemos un servicio web corriendo en la máquina, además del SSH. Enumerando nos encontramos con un directorio llamado `images` donde hay habilitado un directory indexing. Observamos una imagen, `agua_ssh.jpg`.
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ## 🚪 Ganando acceso
 
@@ -30,15 +30,15 @@ Mirando el código fuente de la página inicial de Apache, encuentro un comentar
 
 Preguntándole a ChatGPT, descubro que es código Brainfuck. Con un intérprete online, decodifico la cadena:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 Probando esta cadena como contraseña para el usuario `agua`, accedo a la máquina por SSH.
 
-<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalando privilegios
 
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que tenemos permisos para ejecutar el binario `bettercap` como `root` sin necesidad de introducir contraseña.&#x20;
 

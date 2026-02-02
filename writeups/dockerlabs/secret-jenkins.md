@@ -44,12 +44,12 @@ Podemos ejecutar python3 como el usuario `pinguinito` sin necesidad de introduci
 
 Ahora vemos los permisos que tenemos con el usuario `pinguinito`:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que se puede ejecutar la orden `/usr/bin/python3 /opt/script.py` como cualquier usuario sin necesidad de contraseña. El problema viene cuando nos damos cuenta que ese script no tiene permisos de escritura, por lo que no podemos modificarlo para obtener una shell como root. Lo que sí podemos hacer es un library hijacking de la librería `shutil` para la función `shutil.copy`, que es la que usa el script.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 La función copy en nuestra librería falsa nos ejecuta una shell. Ahora ejecutamos el script y obtenemos una shell como root (por usar sudo).
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
