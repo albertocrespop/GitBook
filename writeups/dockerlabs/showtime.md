@@ -1,5 +1,5 @@
 ---
-description: '🧠Dificultad: Fácil | 🔓30/01/2026'
+description: '🧠Dificultad: Fácil | 🔓02/02/2026'
 ---
 
 # ShowTime
