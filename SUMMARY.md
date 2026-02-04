@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [Upload](writeups/dockerlabs/upload.md)
   * [ShowTime](writeups/dockerlabs/showtime.md)
   * [Secret Jenkins](writeups/dockerlabs/secret-jenkins.md)
   * [Picadilly](writeups/dockerlabs/picadilly.md)
