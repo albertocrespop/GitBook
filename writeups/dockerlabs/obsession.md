@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓22/07/2025'
 ---
 
-# Obsession
+# 🟦 Obsession
 
 Realizando un escaneo con `nmap` vemos lo siguiente:
 

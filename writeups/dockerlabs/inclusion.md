@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Medio | 🔓14/07/2025'
 ---
 
-# Inclusion
+# 🟧 Inclusion
 
 Empezamos haciendo un `nmap` a la máquina con el parámetro `-p-` para que recorra todos los puertos.
 

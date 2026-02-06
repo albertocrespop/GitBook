@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓24/01/2026'
 ---
 
-# Move
+# 🟩 Move
 
 ## 🕵️ Reconocimiento
 

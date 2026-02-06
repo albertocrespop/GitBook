@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓31/08/2025'
 ---
 
-# AnonymousPingu
+# 🟩 AnonymousPingu
 
 ## 🕵️ Reconocimiento
 

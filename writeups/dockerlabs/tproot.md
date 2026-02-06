@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓25/07/2025'
 ---
 
-# Tproot
+# 🟦 Tproot
 
 ## 🕵️ Reconocimiento
 

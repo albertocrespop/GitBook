@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓14/07/2025'
 ---
 
-# Injection
+# 🟦 Injection
 
 Tras desplegar la máquina, pruebo a abrir el navegador y ver si tiene alojada una página web. En efecto, aloja una página con un Login.
 

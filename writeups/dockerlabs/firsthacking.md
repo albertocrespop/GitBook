@@ -2,7 +2,7 @@
 description: '🧠 Dificultad: Muy fácil | 🔓22/07/2025'
 ---
 
-# FirstHacking
+# 🟦 FirstHacking
 
 Con `nmap` vemos que solo está abierto el puerto 21 FTP.
 

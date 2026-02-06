@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓04/09/2025'
 ---
 
-# DockerLabs
+# 🟩 DockerLabs
 
 ## 🕵️ Reconocimiento
 

@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓02/09/2025'
 ---
 
-# ConsoleLog
+# 🟩 ConsoleLog
 
 ## 🕵️ Reconocimiento
 

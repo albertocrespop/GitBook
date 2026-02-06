@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓26/01/2026'
 ---
 
-# NodeClimb
+# 🟩 NodeClimb
 
 ## 🕵️ Reconocimiento
 

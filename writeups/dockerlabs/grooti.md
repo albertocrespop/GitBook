@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓25/09/2025'
 ---
 
-# Grooti
+# 🟩 Grooti
 
 ## 🕵️ Reconocimiento
 

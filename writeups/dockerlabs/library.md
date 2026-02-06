@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓13/10/2025'
 ---
 
-# Library
+# 🟩 Library
 
 ## 🕵️ Reconocimiento
 

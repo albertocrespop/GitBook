@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓28/07/2025'
 ---
 
-# Hedgehog
+# 🟦 Hedgehog
 
 ## 🕵️ Reconocimiento
 

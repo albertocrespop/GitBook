@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓23/07/2025'
 ---
 
-# Vacaciones
+# 🟦 Vacaciones
 
 Empezamos con un escaneo de puertos para ver los servicios que está corriendo la máquina:
 

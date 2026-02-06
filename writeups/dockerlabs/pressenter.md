@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓16/10/2025'
 ---
 
-# Pressenter
+# 🟩 Pressenter
 
 ## 🕵️ Reconocimiento
 

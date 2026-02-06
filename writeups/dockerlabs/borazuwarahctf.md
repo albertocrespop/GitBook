@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy Fácil | 🔓22/07/2025'
 ---
 
-# BorazuwarahCTF
+# 🟦 BorazuwarahCTF
 
 La máquina está corriendo un servicio web. Esto lo he comprobado introduciendo la IP en el navegador. Nos encontramos con una foto de un huevo kinder.
 

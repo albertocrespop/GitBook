@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓24/01/2026'
 ---
 
-# Los 40 Ladrones
+# 🟩 Los 40 Ladrones
 
 ## 🕵️ Reconocimiento
 

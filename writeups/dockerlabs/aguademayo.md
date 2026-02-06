@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓28/08/2025'
 ---
 
-# AguaDeMayo
+# 🟩 AguaDeMayo
 
 ## 🕵️ Reconocimiento
 

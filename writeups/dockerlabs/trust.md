@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Muy fácil | 🔓22/07/2025'
 ---
 
-# Trust
+# 🟦 Trust
 
 Empezamos con un reconocimiento con `nmap` que nos muestra la siguiente información:
 

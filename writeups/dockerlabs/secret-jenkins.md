@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓30/01/2026'
 ---
 
-# Secret Jenkins
+# 🟩 Secret Jenkins
 
 ## 🕵️ Reconocimiento
 

@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓29/06/2025'
 ---
 
-# Jenkhack
+# 🟩 Jenkhack
 
 Con un `nmap` vemos los puertos abiertos de la máquina. Todos son relacionados con servicios web.
 

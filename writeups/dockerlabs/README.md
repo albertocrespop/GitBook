@@ -8,4 +8,11 @@ icon: message-pen
 
 DockerLabs es una plataforma creada por **El Pingüino de Mario** donde puedes descargar cientos de máquinas para poner en práctica diversas técnicas de pentesting.
 
-Elegí esta plataforma para practicar, entre otras, porque es muy cómodo desplegar las máquinas en local sin necesidad de VPN's. Además, tiene máquinas de todas las dificultades, tanto para lo que acaban de empezar como para los que cuentan con bastante experiencia.
+Elegí esta plataforma para practicar, entre otras, porque es muy cómodo desplegar las máquinas en local sin necesidad de VPN's. Además, tiene máquinas de todas las dificultades, tanto para los que acaban de empezar como los que cuentan con bastante experiencia.
+
+Las máquinas mostradas a continuación están catalogadas por colores, siendo:
+
+* 🟦 -> Muy fácil
+* 🟩 -> Fácil
+* 🟧 -> Medio
+* 🟥 -> Difícil

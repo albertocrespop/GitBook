@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓01/09/2025'
 ---
 
-# BuscaLove
+# 🟩 BuscaLove
 
 ## 🕵️ Reconocimiento
 

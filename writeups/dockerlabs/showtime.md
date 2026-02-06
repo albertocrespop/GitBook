@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓02/02/2026'
 ---
 
-# ShowTime
+# 🟩 ShowTime
 
 ## 🕵️ Reconocimiento
 
