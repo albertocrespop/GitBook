@@ -6,7 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
-  * [Verdejo](writeups/dockerlabs/verdejo.md)
+  * [🟩 Verdejo](writeups/dockerlabs/verdejo.md)
   * [🟩 Upload](writeups/dockerlabs/upload.md)
   * [🟩 ShowTime](writeups/dockerlabs/showtime.md)
   * [🟩 Secret Jenkins](writeups/dockerlabs/secret-jenkins.md)

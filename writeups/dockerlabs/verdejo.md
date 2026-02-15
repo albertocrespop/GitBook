@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓06/02/2026'
 ---
 
-# Verdejo
+# 🟩 Verdejo
 
 ## 🕵️ Reconocimiento
 
