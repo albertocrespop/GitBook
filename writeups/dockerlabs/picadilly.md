@@ -14,7 +14,7 @@ nmap -sC -sV -Pn $IPTARGET
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos puertos web abiertos (HTTP y HTTPS). Vamos a ver qué directorios encontramos en estos servicios:
 
@@ -24,7 +24,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para la página que usa SSL/TLS, vamos a utilizar el parámetro -k para ignorar los errores de los certificados.
 
@@ -34,7 +34,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 La página web que no está securizada contiene un directory listing. En este se encuentra el archivo `backup.txt`, que contiene lo siguiente:
 
@@ -42,23 +42,23 @@ La página web que no está securizada contiene un directory listing. En este se
 
 Si probamos a poner esta palabra en la herramienta Cyberchef y utilizamos el cifrado césar, encontramos que si desplazamos 3 veces hacia atrás las letras, vemos una posible contraseña coherente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Veamos qué hay en el servicio HTTPS. Hallamos una sección donde podemos subir archivos a la web.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Probamos a subir un archivo llamado `prueba`, pero este no se muestra en la página. Si cambiamos la extensión desde burpsuite a `.txt`, entonces si podemos visualizarlo.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Directamente podemos probar si podemos subir un archivo `.php`:
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ha funcionado correctamente, aunque visualizar el archivo php no nos ayuda de mucho de momento. Nos interesa ejecutarlo. Por ello, accedemos al directorio `/uploads` descubierto anteriormente. Aquí vemos que todos los archivos han sido subidos correctamente:
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 🚪 Ganando acceso
 
@@ -68,7 +68,7 @@ Podemos subir una reverse shell en php a la web y ejecutarla. Para ello utilizar
 
 Nos ponemos a la escucha en nuestra máquina y accedemos al archivo php que hemos subido desde el directorio `/uploads` para que se ejecute:
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalada de privilegios
 

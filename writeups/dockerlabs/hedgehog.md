@@ -8,7 +8,7 @@ description: '🧠Dificultad: Muy fácil | 🔓28/07/2025'
 
 Comenzamos con un escaneo de puertos usando `nmap` :
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si accedemos a la página que aloja el servidor desde el navegador, nos muestra un simple mensaje en texto plano:
 
@@ -30,13 +30,13 @@ tac /usr/share/wordlists/rockyou.txt > reversed_rockyou.txt
 
 También nos damos cuenta que, especialmente, en las últimas líneas del `rockyou` hay muchas líneas con espacios seguidos de la contraseña, por lo que eliminaremos dichos espacios:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ```bash
 tr -d ' ' < reversed_rockyou.txt > reversed_filtered_rockyou.txt
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 Ahora sí, probamos la wordlist con `hydra`:
 
@@ -44,7 +44,7 @@ Ahora sí, probamos la wordlist con `hydra`:
 hydra -l tails -P reversed_filtered_rockyou.txt ssh://$IPTARGET
 ```
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalando privilegios
 
