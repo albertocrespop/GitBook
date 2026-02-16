@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [🟩 WalkingCMS](writeups/dockerlabs/walkingcms.md)
   * [🟩 Verdejo](writeups/dockerlabs/verdejo.md)
   * [🟩 Upload](writeups/dockerlabs/upload.md)
   * [🟩 ShowTime](writeups/dockerlabs/showtime.md)
