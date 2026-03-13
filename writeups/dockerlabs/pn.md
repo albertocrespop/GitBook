@@ -2,7 +2,7 @@
 description: '🧠Dificultad: Fácil | 🔓13/03/2026'
 ---
 
-# -Pn
+# 🟩 -Pn
 
 ## 🕵️ Reconocimiento
 
