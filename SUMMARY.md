@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [-Pn](writeups/dockerlabs/pn.md)
   * [🟩 Winterfell](writeups/dockerlabs/winterfell.md)
   * [🟩 Whoiam](writeups/dockerlabs/whoiam.md)
   * [🟩 WhereIsMyWebShell](writeups/dockerlabs/whereismywebshell.md)

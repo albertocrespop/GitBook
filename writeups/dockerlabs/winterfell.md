@@ -1,5 +1,5 @@
 ---
-description: '🧠Dificultad: Fácil | 🔓23/02/2026'
+description: '🧠Dificultad: Fácil | 🔓25/02/2026'
 ---
 
 # 🟩 Winterfell
