@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [🟥 Minecraft](writeups/dockerlabs/minecraft.md)
   * [🟩 Mirame](writeups/dockerlabs/mirame.md)
   * [🟩 Psycho](writeups/dockerlabs/psycho.md)
   * [🟩 -Pn](writeups/dockerlabs/pn.md)
