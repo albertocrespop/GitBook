@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [🟩 Paradise](writeups/dockerlabs/paradise.md)
   * [🟩 Backend](writeups/dockerlabs/backend.md)
   * [🟥 Minecraft](writeups/dockerlabs/minecraft.md)
   * [🟩 Mirame](writeups/dockerlabs/mirame.md)
