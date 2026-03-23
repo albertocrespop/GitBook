@@ -12,7 +12,7 @@ Comenzamos con un escaneo de puertos con `nmap`:
 nmap -sC -sV -Pn $IPTARGET | tee nmap
 ```
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Solo se encuentra el puerto del servicio web activo. Procedemos a realizar un escaneo de directorios:
 
@@ -22,11 +22,11 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si entramos a la página `warning.html`, encontramos el siguiente mensaje:
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Tendremos que realizar un escaneo de parámetros en `shell.php` para ver qué parametro es el utilizado para la webshell.
 
@@ -36,7 +36,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/burp-paramete
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que el parámetro es `parameter`. Con esto podemos ejecutar comandos en la máquina víctima.
 
@@ -44,18 +44,18 @@ Vemos que el parámetro es `parameter`. Con esto podemos ejecutar comandos en la
 
 Con burpsuite capturamos la petición e inyectamos el comando que nos ejecuta la reverse shell. En este caso he usado PHP con la herramienta [reverse shell generator](https://www.revshells.com/).
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nos ponemos a la escucha con `netcat` y mandamos la petición.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalada de privilegios
 
 Buscamos los ficheros .txt en el sistema. Encontramos un fichero en `/tmp/.secret.txt`:
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Este fichero contiene la contraseña de `root`, por lo que nos da acceso directo.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
