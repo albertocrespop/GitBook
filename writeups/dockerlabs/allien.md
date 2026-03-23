@@ -36,7 +36,7 @@ smbmap -H 172.17.0.2
 
 <figure><img src="../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
 
-En el recurso compartido `myshare` hay un rabbithole, y en los demás recursos no tenemos permisos como usuario anónimo. Veamos esta vez los usuarios que encontramos con `crackmapexec`:
+En el recurso compartido `myshare` encontramos un recurso llamado `access.txt` con un token JWT del usuario `satriani7`. En los demás recursos no tenemos permisos como usuario anónimo. Veamos esta vez los usuarios que encontramos con `crackmapexec`:
 
 {% code overflow="wrap" %}
 ```bash
