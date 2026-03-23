@@ -14,7 +14,7 @@ nmap -sC -sV -Pn $IPTARGET | tee nmap
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que el servidor está corriendo un servicio SSH, HTTP y SMB. Realizamos un escaneo de directorios al servicio web con `ffuf`.
 
@@ -24,7 +24,7 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el código html del  directorio `http://172.17.0.2/galery.html` encontramos un comentario con una cadena en base64.
 
@@ -34,13 +34,13 @@ En el código html del  directorio `http://172.17.0.2/galery.html` encontramos u
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al directorio `/estoesunsecreto`, encontramos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 🚪 Ganando acceso
 

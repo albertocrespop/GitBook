@@ -12,7 +12,7 @@ Comenzamos con un escaneo de puertos con `nmap`:
 nmap -sC -sV -Pn $IPTARGET | tee nmap
 ```
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Solo se encuentra activo el puerto 80 HTTP. Realizamos un escaneo de directorios con `ffuf`:
 
@@ -20,19 +20,19 @@ Solo se encuentra activo el puerto 80 HTTP. Realizamos un escaneo de directorios
 ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-list-2.3-medium.txt:FUZZ -u "http://$IPTARGET/FUZZ" -e .html,.php,.txt,.xml,.js
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Accedemos a la web para ver su contenido.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el código fuente de la web vemos que hay un comentario que hace referencia a un fichero `.txt` sobre un plugin:
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si accedemos a ese fichero a través de la web, nos encontramos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el código podemos ver que existe un comando (`!exec`) que permite ejecutar comandos en el sistema. Esto podría ser útil para más adelante.
 
@@ -45,7 +45,7 @@ pip install mcstatus
 mcstatus 172.17.0.2:25565 status
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Efectivamente hay un servidor en la versión 1.12.2. Instalamos un cliente de Minecraft a través de Docker:
 
@@ -100,13 +100,13 @@ java -jar TLauncher.jar
 
 Y seleccionamos la versión 1.12.2.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez conseguida la mayor criminalidad vista hasta la fecha, podemos añadir el servidor y conectarnos.
 
 Lo primero que observamos es que tenemos permisos como OP. Listamos los plugins que están cargados:
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Está el plugin que vimos anteriormente en la web. Probamos a ejecutar un comando:
 
@@ -116,7 +116,7 @@ Está el plugin que vimos anteriormente en la web. Probamos a ejecutar un comand
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 🚪 Ganando acceso
 
@@ -128,9 +128,9 @@ Podemos ejecutar una reverse shell hacia nuestra máquina para ganar acceso como
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez dentro, miramos la flag de `root`:
 

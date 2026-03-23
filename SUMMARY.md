@@ -6,6 +6,7 @@
 ## Writeups
 
 * [DockerLabs](writeups/dockerlabs/README.md)
+  * [🟩 Pequeñas Mentirosas](writeups/dockerlabs/pequenas-mentirosas.md)
   * [🟩 Balulero](writeups/dockerlabs/balulero.md)
   * [🟩 Paradise](writeups/dockerlabs/paradise.md)
   * [🟩 Backend](writeups/dockerlabs/backend.md)

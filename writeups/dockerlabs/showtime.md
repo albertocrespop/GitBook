@@ -14,7 +14,7 @@ nmap -sC -sV -Pn $IPTARGET
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Los únicos puertos abiertos son el del servicio web y el de SSH. Con un escaneo de directorios encontramos lo siguiente:
 
@@ -24,15 +24,15 @@ ffuf -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/directory-lis
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si nos vamos al directorio `/login_page`, encontramos un formulario de inicio de sesión. Probando combinaciones típicas, como `admin:admin` o `admin:admin123`, no se obtiene nada. Si introducimos el caracter `'` en el campo de contraseña, obtenemos un mensaje de error de SQL, lo que nos indica que no está sanitizando correctamente la entrada y es muy probable que podamos aprovecharnos de un SQLI.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con `burpsuite` vemos que la petición POST del login se hace a `/login_page/auth.php`, con los campos `usuario` y `contraseña`.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Con `sqlmap` encontramos que el formulario es vulnerable a 3 tipos de SQLI, entre ellos, un time-based blind (relacionado con el nombre de la máquina).
 
@@ -42,7 +42,7 @@ sqlmap -u "http://172.17.0.2/login_page/auth.php" --data="usuario=admin&contrase
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 🚪 Ganando acceso
 
@@ -54,7 +54,7 @@ sqlmap -u "http://172.17.0.2/login_page/auth.php" --data="usuario=admin&contrase
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Dentro de esta base de datos, vemos la única tabla llamada `usuarios`. Veamos qué hay dentro de esta tabla.
 
@@ -64,21 +64,21 @@ sqlmap -u "http://172.17.0.2/login_page/auth.php" --data="usuario=admin&contrase
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Podemos iniciar sesión con el último usuario de esta tabla, con las credenciales `joe:MiClaveEsInhackeable`. Accedemos a un panel donde podemos ejecutar código en python:
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si introducimos un código en python para generar una reverse shell, podemos ganar acceso a la máquina.
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 💥 Escalada de privilegios
 
 En el directorio `/tmp` se encuentra un fichero llamado `.hidden_text.txt`. El contenido de este fichero es una lista de trucos del San Andreas (qué recuerdos...).
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
